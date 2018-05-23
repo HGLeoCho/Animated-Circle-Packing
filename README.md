@@ -5,5 +5,7 @@ Changed the stroke on each circle, to become a variable - which I then decrement
 
 //+ stroke to have a random green hue as well.
 
--add buttons and Range slider for configuration
--Start button
+
+Things to add.
+-add buttons and Range slider for configuration.
+-Start button.
