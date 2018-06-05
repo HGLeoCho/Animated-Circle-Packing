@@ -6,7 +6,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(300, 300);
   var density = displayDensity();
   pixelDensity(1);
   img.loadPixels();
