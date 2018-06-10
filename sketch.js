@@ -1,27 +1,31 @@
 var circles;
 var img;
+var imgx = 700, imgy = 393;
 
 function preload() {
-  img = loadImage("assets/kitten.jpg");
+  img = loadImage("assets/spacecat.jpg");
 }
 
 function setup() {
-  createCanvas(300, 300);
-  var density = displayDensity();
-  pixelDensity(1);
+  createCanvas(imgx, imgy*2);
+  image(img, 0, img.height+200, img.width/2 , img.height/2);
+  pixelDensity(3);
   img.loadPixels();
   circles = [];
+
 
   console.log(img.width);
   console.log(img.height);
   console.log("pixels", img.pixels.length);
-  console.log(density)
+
+
+
 }
 
 function draw() {
-  background(0);
+  //background(0);
 
-  var total = 10;
+  var total = 8;
   var count = 0;
   var attempts = 0;
 
@@ -32,9 +36,10 @@ function draw() {
       count++;
     }
     attempts++;
-    if (attempts > 1000) {
+    if (attempts > 700) {
       noLoop();
       console.log("finished");
+
       break;
     }
   }
@@ -63,6 +68,8 @@ function draw() {
 
     circle.show();
     circle.grow();
+
+
   }
 }
 
