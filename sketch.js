@@ -74,7 +74,6 @@ function draw() {
 
   }
   
-  fr.html(floor(frameRate()));
 
 }
 
