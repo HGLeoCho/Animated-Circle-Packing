@@ -8,7 +8,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(imgx, imgy*2);
+  createCanvas(imgx*1.5, imgy);
   pixelDensity(3);
   img.loadPixels();
   circles = [];
