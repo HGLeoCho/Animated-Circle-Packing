@@ -1,6 +1,7 @@
 var circles;
 var img;
 var imgx = 700, imgy = 393;
+var framerate;
 
 function preload() {
   img = loadImage("assets/spacecat.jpg");
@@ -18,7 +19,7 @@ function setup() {
   console.log(img.height);
   console.log("pixels", img.pixels.length);
 
-
+  framerate = createP('');
 
 }
 
@@ -69,7 +70,7 @@ function draw() {
     circle.show();
     circle.grow();
 
-
+    fr.html(floor(frameRate()));
   }
 }
 
