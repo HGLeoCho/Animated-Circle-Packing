@@ -9,7 +9,6 @@ function preload() {
 
 function setup() {
   createCanvas(imgx, imgy*2);
-  image(img, 0, img.height+200, img.width/2 , img.height/2);
   pixelDensity(3);
   img.loadPixels();
   circles = [];
@@ -20,7 +19,8 @@ function setup() {
   console.log("pixels", img.pixels.length);
 
   fr = createP('');
-
+  image(img, img.width, img.height*0.5, img.width/2 , img.height/2);
+  text("SpaceCat!!",img.width, img.height*0.48);
 }
 
 function draw() {
@@ -30,6 +30,8 @@ function draw() {
   var count = 0;
   var attempts = 0;
 
+  fr.html("Frame rate: " + floor(frameRate()));
+  
   while (count < total) {
     var newC = newCircle();
     if (newC !== null) {
