@@ -1,4 +1,4 @@
-var circles;
+ var circles;
 var img;
 var imgx = 700, imgy = 393;
 var fr;
@@ -19,8 +19,8 @@ function setup() {
   console.log("pixels", img.pixels.length);
 
   fr = createP('');
-  image(img, img.width, img.height*0.5, img.width/2 , img.height/2);
-  text("SpaceCat!!",img.width, img.height*0.48);
+  frameRate(10);
+  //text("SpaceCat!!",img.width, img.height*0.48);
 }
 
 function draw() {
@@ -39,10 +39,10 @@ function draw() {
       count++;
     }
     attempts++;
-    if (attempts > 700) {
+    if (attempts > 1500) {
       noLoop();
       console.log("finished");
-
+      
       break;
     }
   }
@@ -60,7 +60,7 @@ function draw() {
             var d = dist(circle.x, circle.y, other.x, other.y);
             var distance = circle.r + other.r;
 
-            if (d - 1 < distance) {
+            if (d - 0.8 < distance) {
               circle.growing = false;
               break;
             }
@@ -73,8 +73,11 @@ function draw() {
     circle.grow();
 
   }
+  var newx = img.width*0.38;
+  var newy = img.height*0.37;
+  image(img, img.width*0.65, img.height*0.65, newx , newy);
   
-
+  //rect(600, 253, newx+50, newy+50);
 }
 
 function newCircle() {
