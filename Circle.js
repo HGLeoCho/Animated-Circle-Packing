@@ -1,7 +1,7 @@
 function Circle(x, y, color) {
     this.x = x;
     this.y = y;
-    this.r = 2;
+    this.r = 9;
     this.color = color;
     this.growing = true;
   
